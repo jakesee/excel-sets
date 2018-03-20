@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sets", "Sets\Sets.csproj", "{FB5D558B-A827-4719-ABCB-036EB1E4828E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetsInstaller", "SetsInstaller\SetsInstaller.vdproj", "{2F78A42B-8803-45B2-9C81-ED09E970BEB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB5D558B-A827-4719-ABCB-036EB1E4828E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5D558B-A827-4719-ABCB-036EB1E4828E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5D558B-A827-4719-ABCB-036EB1E4828E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5D558B-A827-4719-ABCB-036EB1E4828E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F78A42B-8803-45B2-9C81-ED09E970BEB3}.Debug|Any CPU.ActiveCfg = Debug
+		{2F78A42B-8803-45B2-9C81-ED09E970BEB3}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -43,10 +43,13 @@
             this.btnUnion = this.Factory.CreateRibbonButton();
             this.group2 = this.Factory.CreateRibbonGroup();
             this.btnFileMerge = this.Factory.CreateRibbonButton();
+            this.group3 = this.Factory.CreateRibbonGroup();
+            this.btnFindDuplicates = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.tabSets.SuspendLayout();
             this.group1.SuspendLayout();
             this.group2.SuspendLayout();
+            this.group3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab1
@@ -58,6 +61,7 @@
             // tabSets
             // 
             this.tabSets.Groups.Add(this.group1);
+            this.tabSets.Groups.Add(this.group3);
             this.tabSets.Groups.Add(this.group2);
             this.tabSets.Label = "Sets";
             this.tabSets.Name = "tabSets";
@@ -122,6 +126,21 @@
             this.btnFileMerge.ShowImage = true;
             this.btnFileMerge.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnFileMerge_Click);
             // 
+            // group3
+            // 
+            this.group3.Items.Add(this.btnFindDuplicates);
+            this.group3.Label = "Data";
+            this.group3.Name = "group3";
+            // 
+            // btnFindDuplicates
+            // 
+            this.btnFindDuplicates.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnFindDuplicates.Label = "Find Duplicates";
+            this.btnFindDuplicates.Name = "btnFindDuplicates";
+            this.btnFindDuplicates.OfficeImageId = "PasteDuplicate";
+            this.btnFindDuplicates.ShowImage = true;
+            this.btnFindDuplicates.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnFindDuplicates_Click);
+            // 
             // Ribbon
             // 
             this.Name = "Ribbon";
@@ -137,6 +156,8 @@
             this.group1.PerformLayout();
             this.group2.ResumeLayout(false);
             this.group2.PerformLayout();
+            this.group3.ResumeLayout(false);
+            this.group3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -152,6 +173,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnUnion;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnFileMerge;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup group3;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnFindDuplicates;
     }
 
     partial class ThisRibbonCollection

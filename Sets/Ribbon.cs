@@ -16,6 +16,38 @@ namespace Sets
             
         }
 
+        private void btnFindDuplicates_Click(object sender, RibbonControlEventArgs e)
+        {
+            Excel.Window window;
+            Excel.Application application;
+            Excel.Worksheet activeWorksheet;
+            Excel.Range activeRange;
+            _GetActiveSelections(e, out application, out window, out activeWorksheet, out activeRange);
+
+            Excel.Range data = null;
+            if(_ShowRangeSelector("Select data set", application, out data))
+            {
+                List<string> list = _BuildList(data);
+                var duplicates = list.GroupBy(x => x).Where(g => g.Count() > 1).Select(g => new { Value = g.Key, Count = g.Count() }).ToList();
+
+                int R = activeRange.Row;
+                int C = activeRange.Column;
+                int numDupes = duplicates.Count();
+                MessageBox.Show("Found " + numDupes);
+                Excel.Range current = null;
+                for (int row = R, i = 0; i < numDupes; row++, i++)
+                {
+                    // write the value
+                    current = activeRange.Worksheet.Cells[row, C];
+                    current.Value2 = duplicates[i].Value;
+
+                    // write the count next to the value
+                    current = activeRange.Worksheet.Cells[row, C + 1];
+                    current.Value2 = duplicates[i].Count;
+                }
+            }
+        }
+
         private void btnUnion_Click(object sender, RibbonControlEventArgs e)
         {
             _Calculate(e, _CalculateUnion);
@@ -38,13 +70,14 @@ namespace Sets
 
         private void _Calculate(RibbonControlEventArgs e, Func<List<string>, List<string>, List<string>> calculator)
         {
-            Excel.Window window = e.Control.Context;
-            Excel.Application application = (Excel.Application)window.Application;
-            Excel.Worksheet activeWorksheet = (Excel.Worksheet)window.Application.ActiveSheet;
-            Excel.Range activeRange = window.Application.ActiveCell;
+            Excel.Window window;
+            Excel.Application application;
+            Excel.Worksheet activeWorksheet;
+            Excel.Range activeRange;
+            _GetActiveSelections(e, out application, out window, out activeWorksheet, out activeRange);
 
             Excel.Range firstRange, secondRange;
-            if (_GetRange("Select first set", application, out firstRange) && _GetRange("Select second set", application, out secondRange))
+            if (_ShowRangeSelector("Select first set", application, out firstRange) && _ShowRangeSelector("Select second set", application, out secondRange))
             {
                 var list = calculator(_BuildList(firstRange), _BuildList(secondRange));
 
@@ -53,7 +86,15 @@ namespace Sets
             }
         }
 
-        private bool _GetRange(string prompt, Excel.Application application, out Excel.Range range)
+        private void _GetActiveSelections(RibbonControlEventArgs e, out Excel.Application application, out Excel.Window window, out Excel.Worksheet activeWorksheet, out Excel.Range activeRange)
+        {
+            window = e.Control.Context;
+            application = (Excel.Application)window.Application;
+            activeWorksheet = (Excel.Worksheet)window.Application.ActiveSheet;
+            activeRange = window.Application.ActiveCell;
+        }
+
+        private bool _ShowRangeSelector(string prompt, Excel.Application application, out Excel.Range range)
         {
             range = null;
             var set = application.InputBox(prompt, "Range Selector", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, 8);
@@ -75,7 +116,7 @@ namespace Sets
                 for(int col = 1; col <= cols; col++)
                 {
                     var temp = ((Excel.Range)range.Cells[row, col]);
-                    var sz = (string)temp.Value2;
+                    var sz = (temp.Value2 == null) ? null : temp.Value2.ToString();
                     list.Add(sz);
                 }
             }

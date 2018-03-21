@@ -28,13 +28,13 @@
         "Entry"
         {
         "MsmKey" = "8:_3DB9AD91C1408A563C31D603C8F0D07D"
-        "OwnerKey" = "8:_EE8F6D24592571FA2C2953B288A032CC"
+        "OwnerKey" = "8:_430367A0107346FA863B3FDF61752A6F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_3DB9AD91C1408A563C31D603C8F0D07D"
-        "OwnerKey" = "8:_430367A0107346FA863B3FDF61752A6F"
+        "OwnerKey" = "8:_EE8F6D24592571FA2C2953B288A032CC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,31 +106,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_430367A0107346FA863B3FDF61752A6F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CABF00FAE8A1256EE06CD8043D23B690"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B8906360F778A98CCC22EBCAC7F57AF3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EE8F6D24592571FA2C2953B288A032CC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D9B2771D65AE43491CCB0C2690159AB6"
+        "OwnerKey" = "8:_3DB9AD91C1408A563C31D603C8F0D07D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -142,7 +118,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3DB9AD91C1408A563C31D603C8F0D07D"
+        "OwnerKey" = "8:_D9B2771D65AE43491CCB0C2690159AB6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_EE8F6D24592571FA2C2953B288A032CC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B8906360F778A98CCC22EBCAC7F57AF3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CABF00FAE8A1256EE06CD8043D23B690"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_430367A0107346FA863B3FDF61752A6F"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -163,6 +163,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -179,6 +187,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -215,11 +231,6 @@
             "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_2D37E8771EACF81BE8296A1D2F810A26"
-                    {
-                    "Name" = "8:stdole.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
@@ -246,11 +257,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3DB9AD91C1408A563C31D603C8F0D07D"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.dll"
             "TargetName" = "8:"
@@ -277,11 +283,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_AAD191C7D12A74130333C7B35C74A18D"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.dll"
             "TargetName" = "8:"
@@ -308,11 +309,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B8906360F778A98CCC22EBCAC7F57AF3"
-                    {
-                    "Name" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
             "TargetName" = "8:"
@@ -339,11 +335,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CABF00FAE8A1256EE06CD8043D23B690"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
             "TargetName" = "8:"
@@ -390,11 +381,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D9B2771D65AE43491CCB0C2690159AB6"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
             "TargetName" = "8:"
@@ -441,11 +427,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_EE8F6D24592571FA2C2953B288A032CC"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Excel.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Excel.dll"
             "TargetName" = "8:"
@@ -521,15 +502,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetsInstaller"
-        "ProductCode" = "8:{627979B1-3515-4FB8-83C2-89B026AD5681}"
-        "PackageCode" = "8:{3F3F0D7B-60C3-46F5-855E-9C6F357CC8A8}"
+        "ProductCode" = "8:{567EA4F8-BB99-4FAE-A1DE-CA844B7C9BDE}"
+        "PackageCode" = "8:{AA98F680-8C46-4A41-882D-BEB5A9517CF3}"
         "UpgradeCode" = "8:{E7616AF3-8A1A-4790-8634-06F6CA1EB9FC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Braincase"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1145,7 +1126,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_430367A0107346FA863B3FDF61752A6F"
             {
-            "SourcePath" = "8:..\\Sets\\obj\\Release\\Sets.dll"
+            "SourcePath" = "8:..\\Sets\\obj\\Debug\\Sets.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_86F3598F24E14E54B839DE9B1BA26062"
